@@ -1,0 +1,70 @@
+[
+  {
+    "_id": "05376c74-96fa-40ea-aaae-9ae8909842e8",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://techetyop.com/api/auth/signin",
+    "url": "localhost:8080/api/auth/signup",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-17T13:40:56.268Z",
+    "modified": "2022-10-25T07:28:12.642Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n \"username\":\"mesfin\",\n \"email\":\"mesfin@bizenforce.com\",\n \"password\":\"001988mtmT$\",\n \"phone\":\"+251911572902\",\n \"fullName\":\"Mesfin Tsegaye\",\n \"avatar\":\"mesfin.jpg\",\n \"displayName\":\"Unknown\",\n \"roles\":[\"admin\",\"user\"]\n \n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "240f7727-1cf5-4794-a556-5fb07536c427",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8080/api/auth/signin",
+    "url": "localhost:8080/api/auth/signin",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-25T07:29:05.138Z",
+    "modified": "2022-10-25T07:29:19.264Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n \"phone\":\"+251911572902\",\n  \"password\":\"001988mtmT$\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "a813a96d-3c99-4512-b717-61aa67cdd2e8",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8080/api/item/create?seller",
+    "url": "localhost:8080/api/item/create?seller",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-25T07:31:18.828Z",
+    "modified": "2022-10-25T07:31:18.883Z",
+    "headers": [
+      {
+        "name": "x-access-token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMTFlOTZkLTljNjEtNDcwZS05NTIzLWQ2OTVlMGQ3YmY4MCIsImlhdCI6MTY2NjY4Mjk1OSwiZXhwIjoxNjY2NzY5MzU5fQ.PklgXPBVs-fuMHe8CfvbY7PpvJLpLo3nsNUTlKNKwYk"
+      }
+    ],
+    "params": [
+      {
+        "name": "seller",
+        "value": "",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"logoUrl\": \"logo url\",\n    \"certificateUrl\": \"certificateUrl\",\n    \"companyName\": \"awash bank\",\n    \"companyType\": \"bank\",\n    \"numberOfShares\":2,\n    \"shareValue\": 1123,\n    \"sellingPrice\": 1234,\n    \"status\": \"pending\",\n    \"sellerId\": \"5b11e96d-9c61-470e-9523-d695e0d7bf80\",\n    \"description\": \"description\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

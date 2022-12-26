@@ -1,0 +1,64 @@
+[
+  {
+    "_id": "440dc077-9f3a-494f-8939-4823f98604c2",
+    "colId": "4cd6ea64-d9eb-4840-acb1-a276f866fb05",
+    "containerId": "",
+    "name": "Signin",
+    "url": "https://techetyop.com/api/auth/signin",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-10-17T13:41:22.210Z",
+    "modified": "2022-10-17T13:41:22.210Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"phone\":\"+251015981847\",\n  \"password\":\"12345678\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "982eecf7-9bf3-45a8-a173-148cfa2c2c59",
+    "colId": "4cd6ea64-d9eb-4840-acb1-a276f866fb05",
+    "containerId": "",
+    "name": "signup",
+    "url": "",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-10-17T13:41:54.462Z",
+    "modified": "2022-10-17T13:41:54.463Z",
+    "headers": []
+  },
+  {
+    "_id": "0aa3d9ab-6466-4067-8c42-8ce6db039266",
+    "colId": "95ffdf4c-96aa-41fe-822b-72dcf8447bef",
+    "containerId": "",
+    "name": "Signin",
+    "url": "https://techetyop.com/api/auth/signin",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-10-17T13:42:33.236Z",
+    "modified": "2022-10-17T13:42:33.236Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"phone\":\"+251015981847\",\n  \"password\":\"12345678\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d1681050-19be-4ab2-8e8b-6f3147c48433",
+    "colId": "95ffdf4c-96aa-41fe-822b-72dcf8447bef",
+    "containerId": "",
+    "name": "signup",
+    "url": "",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-10-17T13:42:33.237Z",
+    "modified": "2022-10-17T13:42:33.237Z",
+    "headers": []
+  }
+]

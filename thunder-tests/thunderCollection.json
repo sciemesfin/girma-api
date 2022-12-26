@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "4cd6ea64-d9eb-4840-acb1-a276f866fb05",
+    "colName": "ShareGebeya",
+    "created": "2022-10-17T13:41:22.208Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "95ffdf4c-96aa-41fe-822b-72dcf8447bef",
+    "colName": "ShareGebeya Copy",
+    "created": "2022-10-17T13:42:33.235Z",
+    "sortNum": 20000,
+    "folders": []
+  }
+]
