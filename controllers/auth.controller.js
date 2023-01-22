@@ -216,3 +216,11 @@ exports.getUser = async (req, res) => {
     .then((user) => res.status(200).json(user))
     .catch((e) => res.status(500).json(e));
 };
+
+exports.deleteUser = async (req, res) => {
+  const user = await User.destroy({ where: { id: req.query.id } });
+  if (user !== 0 && user !== "0") {
+    const data = await User.findAll();
+    res.status(200).json(data);
+  } else res.status(500).json({ error: "Unable to delete user." });
+};

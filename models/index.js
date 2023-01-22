@@ -23,7 +23,11 @@ db.user = require("../models/user.model.js")(sequelize, Sequelize);
 db.role = require("../models/role.model.js")(sequelize, Sequelize);
 db.item = require("../models/item.model.js")(sequelize, Sequelize);
 db.request = require("../models/request.model")(sequelize, Sequelize);
-
+db.category = require("../models/category.model.js")(sequelize, Sequelize);
+db.subcategory = require("../models/subcategory.model.js")(
+  sequelize,
+  Sequelize
+);
 
 db.role.belongsToMany(db.user, {
   through: "user_roles",
@@ -63,6 +67,37 @@ db.request.belongsTo(db.item, {
 });
 db.item.hasMany(db.request, {
   foreignKey: "itemId",
+});
+
+//category
+db.category.belongsTo(db.user, {
+  foreignKey: "userId",
+});
+db.user.hasMany(db.category, {
+  foreignKey: "userId",
+});
+
+//subcategory
+db.subcategory.belongsTo(db.category, {
+  foreignKey: "categoryId",
+});
+db.category.hasMany(db.subcategory, {
+  foreignKey: "categoryId",
+});
+
+//item-category
+db.item.belongsTo(db.category, {
+  foreignKey: "categoryId",
+});
+db.category.hasMany(db.item, {
+  foreignKey: "categoryId",
+});
+//item-subcategory
+db.item.belongsTo(db.subcategory, {
+  foreignKey: "subcategoryId",
+});
+db.subcategory.hasMany(db.item, {
+  foreignKey: "subcategoryId",
 });
 
 db.ROLES = ["user", "admin"];

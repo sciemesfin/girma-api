@@ -25,4 +25,5 @@ module.exports = function (app) {
   app.get("/api/user/me", [authJwt.verifyToken], controller.getUser);
   app.patch("/api/user/update-psd", [authJwt.verifyToken], controller.updatePassword);
   app.get("/api/users", [authJwt.verifyToken], controller.getUsers);
+  app.delete("/api/users", [authJwt.verifyToken], controller.deleteUser);
 };

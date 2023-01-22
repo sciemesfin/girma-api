@@ -44,6 +44,12 @@ module.exports = (sequelize, Sequelize) => {
     userId: {
       type: Sequelize.UUID,
     },
+    categoryId: {
+      type: Sequelize.UUID,
+    },
+    subcategoryId: {
+      type: Sequelize.UUID,
+    },
   });
 
   return Item;
