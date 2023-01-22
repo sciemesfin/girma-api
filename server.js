@@ -53,7 +53,12 @@ function initial() {
     name: "user",
   });
   Role.create({
+    id: 2,
+    name: "staff",
+  });
+  Role.create({
     id: 3,
     name: "admin",
   });
+ 
 }
