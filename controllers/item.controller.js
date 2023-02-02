@@ -3,6 +3,8 @@ const Sequelize = require("sequelize");
 
 const Item = db.item;
 const User = db.user;
+const Category=db.category
+const Subcategory=db.subcategory
 const Notification = db.notification;
 
 exports.addItem = (req, res) => {
@@ -17,7 +19,9 @@ exports.addItem = (req, res) => {
     cost: req.body.cost,
     status: req.body.status,
     description: req.body.description,
-    userId:req.body.userId
+    userId:req.body.userId,
+    categoryId:req.body.categoryId,
+    subcategoryId:req.body.subcategoryId
   })
     .then((item) => {
       res.send({ message: "Item added successfully!", res: item });
@@ -64,7 +68,7 @@ exports.getItems = (req, res) => {
             : [["createdAt", "DESC"]],
         offset: req.query.offset ? parseInt(req.query.offset) : 0,
         limit: req.query.limit ? parseInt(req.query.limit) : 10,
-        include: [{ model: User }],
+        include: [{ model: User },{model:Category},{model:Subcategory}],
       }
     : {};
 

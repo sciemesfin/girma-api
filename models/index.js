@@ -100,6 +100,6 @@ db.subcategory.hasMany(db.item, {
   foreignKey: "subcategoryId",
 });
 
-db.ROLES = ["user", "admin"];
+db.ROLES = ["user", "admin","staff"];
 
 module.exports = db;
