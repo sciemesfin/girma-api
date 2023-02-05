@@ -106,22 +106,7 @@ exports.signup = (req, res) => {
 };
 
 exports.signin = (req, res) => {
-  User.findOne({
-    where: {
-      email: req.body.email,
-      // [Op.or]: [
-      //   { username: req.body.email },
-
-      //   {
-      //     phone: req.body.email,
-      //   },
-
-      //   {
-      //     phone: req.body.username,
-      //   },
-      // ],
-    },
-  })
+  User.findOne({where: {email: req.body.email } },{include: [{ model: Role }],})
     .then((user) => {
       if (!user) {
         return res.status(404).send({ message: "User Not found." });
@@ -187,7 +172,7 @@ exports.updateUser = (req, res) => {
     .catch((err) => res.status(500).json(err));
 };
 exports.getUsers = (req, res) => {
-  User.findAll()
+  User.findAll({include: [{ model: Role }],})
     .then((users) => {
       res.status(200).json(users)
     })
@@ -212,7 +197,7 @@ exports.updatePassword = (req, res) => {
 };
 
 exports.getUser = async (req, res) => {
-  User.findByPk(req.query.id)
+  User.findByPk(req.query.id,{include: [{ model: Role }],})
     .then((user) => res.status(200).json(user))
     .catch((e) => res.status(500).json(e));
 };
